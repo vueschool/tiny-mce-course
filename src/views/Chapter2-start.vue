@@ -2,11 +2,17 @@
 import PageHeading from '@/components/PageHeading.vue'
 import { ref } from 'vue'
 import Editor from '@tinymce/tinymce-vue'
+// email template from colorlib.com
+// https://colorlib.com/wp/responsive-html-email-templates/
+import emailTemplate from '@/emails/NewsletterTemplate/index.html?raw'
+import emailTemplateCSS from '@/emails/NewsletterTemplate/style.css?raw'
+import articleFragment from '@/emails/NewsletterTemplate/fragments/article.html?raw'
+
 const apiKey = import.meta.env.VITE_API_KEY
-const value = ref('Hello <strong>world</strong>')
+const value = ref(emailTemplate)
 </script>
 <template>
-  <PageHeading>Getting Started with Tiny MCE</PageHeading>
+  <PageHeading>One Freakin' Sweet Newsletter Editor</PageHeading>
   <div>
     <Editor
       :api-key="apiKey"
