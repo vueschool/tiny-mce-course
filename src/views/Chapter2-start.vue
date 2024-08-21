@@ -17,9 +17,9 @@ const value = ref(emailTemplate)
     <Editor
       :api-key="apiKey"
       :init="{
-        plugins: 'lists link image table code help casechange',
+        plugins: 'lists link image table code help ,
         toolbar:
-          'casechange italic bold underline strikethrough | bullist numlist | link image table code help'
+          'italic bold underline strikethrough | bullist numlist | link image table code help'
       }"
       v-model="value"
     />
