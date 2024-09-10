@@ -10,24 +10,44 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/chapter-1',
-      name: 'chapter-1',
-      component: () => import('@/views/Chapter1.vue')
+      path: '/chapter-1-start',
+      name: 'chapter-1-start',
+      component: () => import('@/views/Chapter1-start.vue')
     },
     {
-      path: '/chapter-2',
-      name: 'chapter-2',
-      component: () => import('@/views/Chapter2.vue')
+      path: '/chapter-1-end',
+      name: 'chapter-1-end',
+      component: () => import('@/views/Chapter1-end.vue')
     },
     {
-      path: '/chapter-3',
-      name: 'chapter-3',
-      component: () => import('@/views/Chapter3.vue')
+      path: '/chapter-2-start',
+      name: 'chapter-2-start',
+      component: () => import('@/views/Chapter2-start.vue')
     },
     {
-      path: '/chapter-4',
-      name: 'chapter-4',
-      component: () => import('@/views/Chapter4.vue')
+      path: '/chapter-2-end',
+      name: 'chapter-2-end',
+      component: () => import('@/views/Chapter2-end.vue')
+    },
+    {
+      path: '/chapter-3-start',
+      name: 'chapter-3-start',
+      component: () => import('@/views/Chapter3-start.vue')
+    },
+    {
+      path: '/chapter-3-end',
+      name: 'chapter-3-end',
+      component: () => import('@/views/Chapter3-end.vue')
+    },
+    {
+      path: '/chapter-4-start',
+      name: 'chapter-4-start',
+      component: () => import('@/views/Chapter4-start.vue')
+    },
+    {
+      path: '/chapter-4-end',
+      name: 'chapter-4-end',
+      component: () => import('@/views/Chapter4-end.vue')
     }
   ]
 })

@@ -1,17 +1,21 @@
 <script setup lang="ts">
 const links = [
   { name: 'Home', path: '/' },
-  { name: 'Chapter 1', path: '/chapter-1' },
-  { name: 'Chapter 2', path: '/chapter-2' },
-  { name: 'Chapter 3', path: '/chapter-3' },
-  { name: 'Chapter 4', path: '/chapter-4' }
+  { name: 'Chapter 1 Start', path: '/chapter-1-start' },
+  { name: 'Chapter 1 End', path: '/chapter-1-end' },
+  { name: 'Chapter 2 Start', path: '/chapter-2-start' },
+  { name: 'Chapter 2 End', path: '/chapter-2-end' },
+  { name: 'Chapter 3 Start', path: '/chapter-3-start' },
+  { name: 'Chapter 3 End', path: '/chapter-3-end' },
+  { name: 'Chapter 4 Start', path: '/chapter-4-start' },
+  { name: 'Chapter 4 End', path: '/chapter-4-end' }
 ]
 </script>
 <template>
-  <nav class="border-r border-gray-200 h-screen">
+  <nav class="h-screen border-r border-gray-200">
     <ul class="">
       <li v-for="link in links" :key="link.name">
-        <RouterLink class="hover:bg-gray-200 px-6 py-2 block" :to="link.path">{{
+        <RouterLink class="block px-6 py-2 hover:bg-gray-200" :to="link.path">{{
           link.name
         }}</RouterLink>
       </li>

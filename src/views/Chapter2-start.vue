@@ -9,7 +9,7 @@ import emailTemplateCSS from '@/emails/NewsletterTemplate/style.css?raw'
 import articleFragment from '@/emails/NewsletterTemplate/fragments/article.html?raw'
 
 const apiKey = import.meta.env.VITE_API_KEY
-const value = ref(emailTemplate)
+const value = ref('')
 </script>
 <template>
   <PageHeading>One Freakin' Sweet Newsletter Editor</PageHeading>
@@ -17,7 +17,7 @@ const value = ref(emailTemplate)
     <Editor
       :api-key="apiKey"
       :init="{
-        plugins: 'lists link image table code help ,
+        plugins: 'lists link image table code help',
         toolbar:
           'italic bold underline strikethrough | bullist numlist | link image table code help'
       }"
