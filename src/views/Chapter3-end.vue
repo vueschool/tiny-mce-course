@@ -11,6 +11,8 @@ const emailData = ref({
   subject: "We think you'll love this thing we're selling",
   body: ''
 })
+
+const value = ref('')
 </script>
 <template>
   <PageHeading>Look at Me Managing Leads (CRM)</PageHeading>
@@ -21,11 +23,10 @@ const emailData = ref({
     <Editor
       :api-key="apiKey"
       :init="{
-        plugins: 'lists link image table code help autoresize',
-        toolbar: 'formatgroup | link image table code help',
         menubar: false,
         statusbar: false,
         toolbar_location: 'bottom',
+        plugins: 'autoresize lists link image table code help',
         min_height: 300,
         max_height: 500,
         autoresize_bottom_margin: 20,
@@ -34,11 +35,12 @@ const emailData = ref({
             icon: 'format',
             tooltip: 'Formatting',
             items:
-              'blocks fontfamily fontsize | bold italic underline strikethrough forecolor | align bullist numlist outdent indent blockquote'
+              'fontfamily fontsize | bold italic underline strikethrough forecolor | align bullist numlist outdent indent blockquote'
           }
-        }
+        },
+        toolbar: 'formatgroup | link image table code help'
       }"
-      v-model="emailData.body"
+      v-model="value"
     />
     <div class="flex justify-end">
       <AppButton>Send Email</AppButton>
