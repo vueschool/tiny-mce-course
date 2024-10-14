@@ -14,7 +14,7 @@ const emailData = ref({
 </script>
 <template>
   <PageHeading>Look at Me Managing Leads (CRM)</PageHeading>
-  <div class="rounded bg-gray-100 p-3 flex flex-col gap-2">
+  <div class="flex flex-col gap-2 p-3 bg-gray-100 rounded">
     <EmailClientInput label="From" v-model="emailData.from" />
     <EmailClientInput label="To" v-model="emailData.to" />
     <EmailClientInput label="Subject" v-model="emailData.subject" />
