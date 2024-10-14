@@ -11,6 +11,8 @@ const emailData = ref({
   subject: "We think you'll love this thing we're selling",
   body: ''
 })
+
+const value = ref('')
 </script>
 <template>
   <PageHeading>Look at Me Managing Leads (CRM)</PageHeading>
