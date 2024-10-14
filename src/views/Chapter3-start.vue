@@ -25,7 +25,7 @@ const value = ref('')
       :init="{
         plugins: 'lists link image table code help casechange',
         toolbar:
-          'blocks fontfamily fontsize | bold italic underline strikethrough forecolor | align bullist numlist outdent indent blockquote'
+          'blocks fontfamily fontsize | bold italic underline strikethrough forecolor | align bullist numlist outdent indent blockquote | link image table code help'
       }"
       v-model="value"
     />
