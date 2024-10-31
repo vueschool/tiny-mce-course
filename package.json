@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^5.1.1",
+    "@vueuse/core": "^11.2.0",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
