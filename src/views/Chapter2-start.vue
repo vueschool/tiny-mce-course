@@ -10,14 +10,24 @@ import articleFragment from '@/emails/NewsletterTemplate/fragments/article.html?
 
 const apiKey = import.meta.env.VITE_API_KEY
 const value = ref(emailTemplate)
+
+const editorComp = ref()
+const output = ref();
+
+async function save() {
+  const editor = editorComp.value.getEditor();
+  const result = await editor.plugins.inlinecss.getContent()
+  output.value = result;
+}
 </script>
 <template>
   <PageHeading>One Freakin' Sweet Newsletter Editor</PageHeading>
+  <button @click="save">Save</button>
   <div>
-    <Editor :api-key="apiKey" :style="{
+    <Editor ref="editorComp" :api-key="apiKey" :style="{
       height: 'calc(100vh - 100px)'
     }" :init="{
-      plugins: 'lists link image table code help mergetags',
+      plugins: 'lists link image table code help mergetags inlinecss',
       editable_root: false,
       editable_class: 'tiny-editable',
       link_list: [
@@ -60,5 +70,7 @@ const value = ref(emailTemplate)
       toolbar:
         'mergetags italic bold underline strikethrough | bullist numlist | link image table code help'
     }" v-model="value" />
+
+    {{ output }}
   </div>
 </template>
