@@ -20,6 +20,11 @@ const value = ref(emailTemplate)
       plugins: 'lists link image table code help mergetags',
       editable_root: false,
       editable_class: 'tiny-editable',
+      link_list: [
+        { title: 'Features', value: 'https://www.tiny.cloud/tinymce/features/' },
+        { title: 'Docs', value: 'https://www.tiny.cloud/pricing/' },
+        { title: 'Pricing', value: 'https://www.tiny.cloud/docs/tinymce/latest/' }
+      ],
       visual: false,
       link_target_list: false,
       object_resizing: false,
