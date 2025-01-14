@@ -9,19 +9,23 @@ import emailTemplateCSS from '@/emails/NewsletterTemplate/style.css?raw'
 import articleFragment from '@/emails/NewsletterTemplate/fragments/article.html?raw'
 
 const apiKey = import.meta.env.VITE_API_KEY
-const value = ref('')
+const value = ref(emailTemplate)
 </script>
 <template>
   <PageHeading>One Freakin' Sweet Newsletter Editor</PageHeading>
   <div>
-    <Editor
-      :api-key="apiKey"
-      :init="{
-        plugins: 'lists link image table code help',
-        toolbar:
-          'italic bold underline strikethrough | bullist numlist | link image table code help'
-      }"
-      v-model="value"
-    />
+    <Editor :api-key="apiKey" :style="{
+      height: 'calc(100vh - 100px)'
+    }" :init="{
+      plugins: 'lists link image table code help',
+      editable_root: false,
+      editable_class: 'tiny-editable',
+      visual: false,
+      link_target_list: false,
+      object_resizing: false,
+      content_style: emailTemplateCSS,
+      toolbar:
+        'italic bold underline strikethrough | bullist numlist | link image table code help'
+    }" v-model="value" />
   </div>
 </template>
