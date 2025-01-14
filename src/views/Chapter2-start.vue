@@ -17,15 +17,43 @@ const value = ref(emailTemplate)
     <Editor :api-key="apiKey" :style="{
       height: 'calc(100vh - 100px)'
     }" :init="{
-      plugins: 'lists link image table code help',
+      plugins: 'lists link image table code help mergetags',
       editable_root: false,
       editable_class: 'tiny-editable',
       visual: false,
       link_target_list: false,
       object_resizing: false,
       content_style: emailTemplateCSS,
+      mergetags_list: [
+        {
+          title: 'Contact',
+          menu: [
+            {
+              value: 'Contact.FirstName',
+              title: 'Contact First Name'
+            },
+            {
+              value: 'Contact.LastName',
+              title: 'Contact Last Name'
+            },
+          ]
+        },
+        {
+          title: 'Downloads',
+          menu: [
+            {
+              value: 'Downloads.WhitePaper',
+              title: 'Whitepaper Download'
+            },
+            {
+              value: 'Downloads.Ebook',
+              title: 'Ebook Download'
+            },
+          ]
+        }
+      ],
       toolbar:
-        'italic bold underline strikethrough | bullist numlist | link image table code help'
+        'mergetags italic bold underline strikethrough | bullist numlist | link image table code help'
     }" v-model="value" />
   </div>
 </template>
