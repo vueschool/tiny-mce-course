@@ -19,7 +19,7 @@ const value = useLocalStorage('tinymce-autosave-my-cms-id', page)
       height: 'calc(100vh - 100px)',
       width: '90%'
     }" :init="{
-      plugins: 'lists link image table help anchor autosave save',
+      plugins: 'lists link image table help anchor autosave save advcode',
       autosave_interval: '10s',
       autosave_prefix: 'tinymce-autosave-{id}',
       style_formats: [
@@ -45,8 +45,9 @@ const value = useLocalStorage('tinymce-autosave-my-cms-id', page)
       save_onsavecallback: () => {
         console.log('Saved!')
       },
+      advcode_inline: true,
       toolbar:
-        'save styles anchor italic bold underline strikethrough | bullist numlist | link image table help',
+        'save styles anchor italic bold underline strikethrough | bullist numlist | link image table help code',
       content_style: css,
       content_css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
       editable_root: false,
