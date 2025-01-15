@@ -19,8 +19,28 @@ const value = ref(page)
       width: '90%'
     }" :init="{
       plugins: 'lists link image table help',
+      style_formats: [
+        { title: 'Paragraph', block: 'p' },
+        { title: 'Heading 1', block: 'h1' },
+        { title: 'Heading 2', block: 'h2' },
+        { title: 'Button', format: 'button' }
+      ],
+      formats: {
+        button: {
+          inline: 'a',
+          classes: 'btn',
+          styles: {
+            backgroundColor: '#335dff',
+            padding: '5px',
+            color: '#ffffff',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            display: 'inline-block'
+          }
+        }
+      },
       toolbar:
-        'italic bold underline strikethrough | bullist numlist | link image table code anchor help',
+        'styles italic bold underline strikethrough | bullist numlist | link image table code anchor help',
       content_style: css,
       content_css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
       editable_root: false,
