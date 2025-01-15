@@ -24,12 +24,15 @@ const user = ref({ username: 'danielkellyio', name: 'Daniel Kelly', avatar: 'htt
       height: 'calc(100vh - 100px)',
       width: '90%'
     }" id="my-cms-id" :init="{
-      plugins: 'advcode autosave lists link image table help anchor tinycomments',
+      plugins: 'advcode autosave lists link image table help anchor save tinycomments',
       advcode_inline: true,
       toolbar:
-        'restoredraft styles italic bold underline strikethrough | bullist numlist | link image table code anchor help addcomment showcomments',
+        'save restoredraft styles italic bold underline strikethrough | bullist numlist | link image table code anchor help addcomment showcomments',
       content_style: css,
       content_css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
+      save_onsavecallback: () => {
+        console.log('Saved!')
+      },
 
       editable_root: false,
       autosave_interval: '10s',
