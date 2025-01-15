@@ -20,7 +20,7 @@ const value = ref(page)
     }" :init="{
       plugins: 'lists link image table help',
       toolbar:
-        'italic bold underline strikethrough | bullist numlist | link image table code anchor help',
+        'italic bold underline strikethrough | bullist numlist | link image table code help',
       content_style: css,
       content_css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
       editable_root: false,
