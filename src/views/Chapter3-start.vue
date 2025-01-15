@@ -20,15 +20,21 @@ const value = ref('')
     <EmailClientInput label="From" v-model="emailData.from" />
     <EmailClientInput label="To" v-model="emailData.to" />
     <EmailClientInput label="Subject" v-model="emailData.subject" />
-    <Editor
-      :api-key="apiKey"
-      :init="{
-        plugins: 'lists link image table code help casechange',
-        toolbar:
-          'fontfamily fontsize | bold italic underline strikethrough forecolor | align bullist numlist outdent indent blockquote | link image table code help'
-      }"
-      v-model="value"
-    />
+    <Editor :api-key="apiKey" :init="{
+      menubar: false,
+      statusbar: false,
+      toolbar_groups: {
+        formatgroup: {
+          items: 'fontfamily fontsize | bold italic underline strikethrough forecolor | align bullist numlist outdent indent blockquote',
+          icon: 'format',
+          tooltip: 'Formatting'
+        }
+      },
+      toolbar:
+        'formatgroup link image table code help',
+      toolbar_location: 'bottom',
+      plugins: 'lists link image table code help casechange',
+    }" v-model="value" />
     <div class="flex justify-end">
       <AppButton>Send Email</AppButton>
     </div>
