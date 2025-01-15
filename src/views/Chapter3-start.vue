@@ -31,12 +31,56 @@ const value = ref('')
         }
       },
       toolbar:
-        'formatgroup link image table code help',
+        'formatgroup link image table code help mergetags',
       toolbar_location: 'bottom',
-      plugins: 'lists link image table code help casechange autoresize',
+      plugins: 'lists link image table code help casechange autoresize mergetags',
       min_height: 300,
       max_height: 500,
-      autoresize_bottom_margin: 20
+      autoresize_bottom_margin: 20,
+      mergetags_list: [
+        {
+          title: 'Contact',
+          menu: [
+            {
+              value: 'Contact.FirstName',
+              title: 'First Name'
+            },
+            {
+              value: 'Contact.LastName',
+              title: 'Last Name'
+            },
+            {
+              value: 'Contact.Company',
+              title: 'Company'
+            },
+            {
+              value: 'Contact.JobTitle',
+              title: 'Job Title'
+            },
+          ]
+        },
+        {
+          title: 'Account Service Rep',
+          menu: [
+            {
+              value: 'Rep.FirstName',
+              title: 'First Name'
+            },
+            {
+              value: 'Rep.LastName',
+              title: 'Last Name'
+            },
+            {
+              value: 'Rep.Email',
+              title: 'Email'
+            }
+          ]
+        }
+      ],
+      link_list: [
+        { title: 'Documentation', value: 'https://docs.mysite.com' },
+        { title: 'Customer Support', value: 'https://support.mysite.com' },
+      ],
     }" v-model="value" />
     <div class="flex justify-end">
       <AppButton>Send Email</AppButton>
