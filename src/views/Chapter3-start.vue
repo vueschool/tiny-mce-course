@@ -33,7 +33,10 @@ const value = ref('')
       toolbar:
         'formatgroup link image table code help',
       toolbar_location: 'bottom',
-      plugins: 'lists link image table code help casechange',
+      plugins: 'lists link image table code help casechange autoresize',
+      min_height: 300,
+      max_height: 500,
+      autoresize_bottom_margin: 20
     }" v-model="value" />
     <div class="flex justify-end">
       <AppButton>Send Email</AppButton>
