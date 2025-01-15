@@ -18,7 +18,7 @@ const value = ref(page)
       height: 'calc(100vh - 100px)',
       width: '90%'
     }" :init="{
-      plugins: 'lists link image table help',
+      plugins: 'lists link image table help anchor',
       style_formats: [
         { title: 'Paragraph', block: 'p' },
         { title: 'Heading 1', block: 'h1' },
@@ -40,7 +40,7 @@ const value = ref(page)
         }
       },
       toolbar:
-        'styles italic bold underline strikethrough | bullist numlist | link image table code anchor help',
+        'styles anchor italic bold underline strikethrough | bullist numlist | link image table code help',
       content_style: css,
       content_css: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
       editable_root: false,
