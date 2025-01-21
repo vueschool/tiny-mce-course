@@ -1,6 +1,12 @@
-# tiny-mce-course
 
-This template should help get you started developing with Vue 3 in Vite.
+
+# Rich Text Editing and Beyond with TinyMCE and Vue
+
+This repo provides the source code for the course [Rich Text Editing and Beyond with TinyMCE and Vue
+](https://vueschool.io/courses/rich-text-editing-and-beyond-with-tinymce-and-vue).
+
+[![Course image](https://vueschool.io/storage/media/a94ba71651cd7d4080fe28ea5326efd0/rich-text-editing-and-beyond-with-tinymce-and-vue.jpeg)](https://vueschool.io/courses/rich-text-editing-and-beyond-with-tinymce-and-vue)
+
 
 ## Recommended IDE Setup
 
